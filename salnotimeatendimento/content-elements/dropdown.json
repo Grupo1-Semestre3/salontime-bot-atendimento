@@ -1,0 +1,222 @@
+[
+  {
+    "id": "dropdown-jPd1ds",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "options$en": [
+        {
+          "label": "Sim",
+          "value": "1"
+        },
+        {
+          "label": "Não",
+          "value": "2"
+        }
+      ],
+      "message$en": "{{user.nome}}, já possui cadastro no SalonTime?",
+      "width$en": 300
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T20:47:46.223Z",
+    "modifiedOn": "2025-05-21T20:48:24.321Z"
+  },
+  {
+    "id": "dropdown-08IZqq",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "Como posso te ajudar?",
+      "options$en": [
+        {
+          "label": "Consultar Agendamentos",
+          "value": "1"
+        },
+        {
+          "label": "Consultar Serviços",
+          "value": "2"
+        },
+        {
+          "label": "Ver FAQ",
+          "value": "3"
+        },
+        {
+          "label": "Encerrar conversa",
+          "value": "4"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T21:38:38.369Z",
+    "modifiedOn": "2025-05-31T22:35:44.060Z"
+  },
+  {
+    "id": "dropdown-PLWaqe",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "Como posso te ajudar?",
+      "options$en": [
+        {
+          "label": "Cadastre-se",
+          "value": "1"
+        },
+        {
+          "label": "Ver FAQ",
+          "value": "2"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T21:51:42.168Z",
+    "modifiedOn": "2025-05-28T23:31:14.015Z"
+  },
+  {
+    "id": "dropdown-ujV_9l",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione um opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "Não conseguimos validar seu email",
+      "options$en": [
+        {
+          "label": "Tentar novamente",
+          "value": "1"
+        },
+        {
+          "label": "Encerrar conversa",
+          "value": "2"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T20:35:26.383Z",
+    "modifiedOn": "2025-05-28T20:22:25.906Z"
+  },
+  {
+    "id": "dropdown-LmE64D",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "Nome: {{user.nome}}\nEmail: {{user.email}}\nTelefone:{{user.telefone}}\nSenha: {{user.senha}}\nVocê confirma esses dados?",
+      "options$en": [
+        {
+          "label": "Confirmo",
+          "value": "1"
+        },
+        {
+          "label": "Não",
+          "value": "2"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T21:37:50.284Z",
+    "modifiedOn": "2025-05-26T21:37:50.284Z"
+  },
+  {
+    "id": "dropdown-49FL4T",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "Não foi possível realizar seu cadastro!",
+      "options$en": [
+        {
+          "label": "Tentar novamente",
+          "value": "1"
+        },
+        {
+          "label": "Encerrar conversa",
+          "value": "2"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T21:21:40.895Z",
+    "modifiedOn": "2025-05-31T21:21:40.895Z"
+  },
+  {
+    "id": "dropdown--yKYjA",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "Deseja continuar a conversa?",
+      "options$en": [
+        {
+          "label": "Sim",
+          "value": "1"
+        },
+        {
+          "label": "Não",
+          "value": "2"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T22:41:51.879Z",
+    "modifiedOn": "2025-05-31T22:41:51.879Z"
+  },
+  {
+    "id": "dropdown-B0oLp2",
+    "formData": {
+      "buttonText$en": "",
+      "placeholderText$en": "Selecione uma opção",
+      "displayInKeyboard$en": true,
+      "markdown$en": true,
+      "typing$en": true,
+      "message$en": "FAQ",
+      "options$en": [
+        {
+          "label": "Qual o horário de funcionamento?",
+          "value": "1"
+        },
+        {
+          "label": "Quais os métodos de pagamento?",
+          "value": "2"
+        },
+        {
+          "label": "Como funciona o preço?",
+          "value": "3"
+        },
+        {
+          "label": "Qual a especialidade do salão?",
+          "value": "4"
+        },
+        {
+          "label": "Onde fica o salão?",
+          "value": "5"
+        }
+      ],
+      "width$en": 200
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T22:49:35.405Z",
+    "modifiedOn": "2025-05-31T22:49:35.405Z"
+  }
+]

@@ -1,0 +1,245 @@
+[
+  {
+    "id": "builtin_text-jj_7xO",
+    "formData": {
+      "text$en": "Olá, sou seu assistente virtual do SalonTime!",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T20:33:05.450Z",
+    "modifiedOn": "2025-05-21T20:33:05.450Z"
+  },
+  {
+    "id": "builtin_text-kb4Bxs",
+    "formData": {
+      "text$en": "Qual seu nome?",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T20:33:29.646Z",
+    "modifiedOn": "2025-05-21T20:33:29.646Z"
+  },
+  {
+    "id": "builtin_text-D69ZLL",
+    "formData": {
+      "text$en": "{{user.nome}}, você já possui cadastro no SalonTime?",
+      "markdown$en": true,
+      "typing$en": true,
+      "variations$en": []
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T20:39:26.796Z",
+    "modifiedOn": "2025-05-21T20:39:26.796Z"
+  },
+  {
+    "id": "builtin_text-ksvGAt",
+    "formData": {
+      "text$en": "Como posso te ajudar?",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T21:08:49.546Z",
+    "modifiedOn": "2025-05-21T21:36:31.571Z"
+  },
+  {
+    "id": "builtin_text-AJp0HU",
+    "formData": {
+      "text$en": "Não possui cadastro",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T21:09:12.389Z",
+    "modifiedOn": "2025-05-21T21:09:12.389Z"
+  },
+  {
+    "id": "builtin_text-_aaCK8",
+    "formData": {
+      "text$en": "Me informe seu email",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-21T22:55:41.985Z",
+    "modifiedOn": "2025-05-21T22:55:41.985Z"
+  },
+  {
+    "id": "builtin_text-CMPvbB",
+    "formData": {
+      "text$en": "Será um prazer ter você concosco",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T21:12:35.374Z",
+    "modifiedOn": "2025-05-26T21:12:35.374Z"
+  },
+  {
+    "id": "builtin_text-NuJaLC",
+    "formData": {
+      "text$en": "Vamos solicitar alguns dados",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T21:13:16.224Z",
+    "modifiedOn": "2025-05-26T21:13:16.224Z"
+  },
+  {
+    "id": "builtin_text-nPEDv9",
+    "formData": {
+      "text$en": "Digite seu telefone",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T21:15:43.907Z",
+    "modifiedOn": "2025-05-26T21:15:43.907Z"
+  },
+  {
+    "id": "builtin_text-rMi9la",
+    "formData": {
+      "text$en": "Crie uma senha",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T21:18:44.926Z",
+    "modifiedOn": "2025-05-26T21:18:44.926Z"
+  },
+  {
+    "id": "builtin_text-6OtCql",
+    "formData": {
+      "text$en": "Digite seu email",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-26T21:46:01.634Z",
+    "modifiedOn": "2025-05-26T21:46:01.634Z"
+  },
+  {
+    "id": "builtin_text-aAPlxE",
+    "formData": {
+      "text$en": "{{user.email}}",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-28T21:14:09.857Z",
+    "modifiedOn": "2025-05-28T21:14:09.857Z"
+  },
+  {
+    "id": "builtin_text-4sY2UC",
+    "formData": {
+      "text$en": "Cadastro realizado com sucesso!",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T18:15:23.143Z",
+    "modifiedOn": "2025-05-31T18:15:23.143Z"
+  },
+  {
+    "id": "builtin_text-ha9shn",
+    "formData": {
+      "text$en": "{{session.usuarioEncontrado.id}}",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T22:11:24.771Z",
+    "modifiedOn": "2025-05-31T22:20:34.643Z"
+  },
+  {
+    "id": "builtin_text-MLkcd1",
+    "formData": {
+      "text$en": "Próximo agendamento:{{session.proximoAgendamento.data}} \nHorário: {{session.proximoAgendamento.inicio}} ás {{session.proximoAgendamento.fim}}\nServiço: {{session.proximoAgendamento.servico.nome}}\nForma de Pagamento: {{session.proximoAgendamento.pagamento.forma}}\n",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T22:33:17.408Z",
+    "modifiedOn": "2025-05-31T22:46:50.784Z"
+  },
+  {
+    "id": "builtin_text-4VPfzP",
+    "formData": {
+      "text$en": "Estamos te aguardando!",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T22:36:40.416Z",
+    "modifiedOn": "2025-05-31T22:36:40.416Z"
+  },
+  {
+    "id": "builtin_text-zzDbzA",
+    "formData": {
+      "text$en": "O salão funciona de Segunda a Sábado, das 10:00 as 19:00",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T23:08:49.638Z",
+    "modifiedOn": "2025-05-31T23:08:49.638Z"
+  },
+  {
+    "id": "builtin_text-5qNh_x",
+    "formData": {
+      "text$en": "Você pode pagar pelo serviço com cartão de crédito, débito, dinheiro ou PIX",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T23:10:20.275Z",
+    "modifiedOn": "2025-05-31T23:10:20.275Z"
+  },
+  {
+    "id": "builtin_text-cQoG2C",
+    "formData": {
+      "text$en": "Os preços dos nossos serviços capilares podem variar de acordo com alguns fatores individuais, como o tamanho do cabelo, a espessura dos fios, o volume e o tempo necessário para a realização do procedimento.\n\nEssas variações são naturais, pois cada cabelo exige uma quantidade diferente de produto, técnicas específicas e dedicação personalizada para garantir um excelente resultado.\n\nAntes da realização do serviço, nossa equipe fará uma avaliação para informar todos os detalhes e garantir total transparência no valor final.",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T23:13:11.680Z",
+    "modifiedOn": "2025-05-31T23:13:11.680Z"
+  },
+  {
+    "id": "builtin_text-Vxt6fY",
+    "formData": {
+      "text$en": "Aqui no salão, somos especialistas em procedimentos químicos, como alisamentos, relaxamentos, colorações, descolorações, entre outros. Trabalhamos com técnicas seguras, produtos de alta qualidade e profissionais capacitados para garantir resultados duradouros e saudáveis para seus fios.\n\nNosso foco é entregar transformações que valorizem sua beleza e respeitem a saúde do seu cabelo. Por isso, antes de qualquer procedimento, realizamos uma avaliação personalizada para entender as características do seu fio e indicar a melhor opção para você.",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T23:14:14.611Z",
+    "modifiedOn": "2025-05-31T23:14:14.611Z"
+  },
+  {
+    "id": "builtin_text-qJg0wt",
+    "formData": {
+      "text$en": "O salão está localizado na Rua das Flores, próximo ao metrô tatuapé",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T23:16:16.196Z",
+    "modifiedOn": "2025-05-31T23:16:16.196Z"
+  },
+  {
+    "id": "builtin_text-o5iKQl",
+    "formData": {
+      "text$en": "Corte Feminino - R$70\nCorte Masculino - R$50\nManicure - R$40",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2025-05-31T23:31:14.992Z",
+    "modifiedOn": "2025-05-31T23:31:14.992Z"
+  }
+]

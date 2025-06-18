@@ -1,0 +1,643 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "Boas-Vindas",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "Boas-Vindas",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Validar-Nome"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-jj_7xO",
+        "say #!builtin_text-kb4Bxs"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "530c4bdb6c",
+      "name": "Validar-Nome",
+      "next": [
+        {
+          "condition": "user.nome && user.nome.trim() !==\"\"",
+          "conditionType": "raw",
+          "node": "Validar-Cadastro"
+        },
+        {
+          "condition": "true",
+          "node": "Boas-Vindas"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"nome\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "17b8ac8ed3",
+      "name": "Validar-Cadastro",
+      "next": [
+        {
+          "condition": "user.possuiCadastro ==\"Sim\"",
+          "conditionType": "raw",
+          "node": "Buscar-Dados-Por-Email"
+        },
+        {
+          "condition": "true",
+          "node": "Opcoes-Atendimento-ClienteNaoCadastrado"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-jPd1ds"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"possuiCadastro\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "7e04e4fb9c",
+      "name": "Opcoes-Atendimento-ClienteNaoCadastrado",
+      "next": [
+        {
+          "condition": "user.lerolero == \"Cadastre-se\"",
+          "conditionType": "raw",
+          "node": "Email"
+        },
+        {
+          "condition": "true",
+          "node": "Ver-faq-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-PLWaqe"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"lerolero\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "a367e29f70",
+      "name": "Buscar-Dados-Por-Email",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Chamar-API"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-_aaCK8"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"email\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "87b11b6564",
+      "name": "Falha-validacao",
+      "next": [
+        {
+          "condition": "user.tentar-novamente == \"Tentar novamente\"",
+          "conditionType": "raw",
+          "node": "Buscar-Dados-Por-Email"
+        },
+        {
+          "condition": "true",
+          "node": "Fim"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-ujV_9l"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"tentar-novamente\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "e05e584c05",
+      "name": "Telefone",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Criar-senha"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-nPEDv9"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"telefone\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "243e73df41",
+      "name": "Criar-senha",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Confirmar-dados"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-rMi9la"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"senha\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "efcfa3984c",
+      "name": "Confirmar-dados",
+      "next": [
+        {
+          "condition": "user.confirmacao == \"Confirmo\"",
+          "conditionType": "raw",
+          "node": "node-ab68"
+        },
+        {
+          "condition": "true",
+          "node": "Opcoes-Atendimento-ClienteNaoCadastrado"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-LmE64D"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"confirmacao\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "ff21b150ae",
+      "name": "Email",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Telefone"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-CMPvbB",
+        "say #!builtin_text-NuJaLC",
+        "say #!builtin_text-6OtCql"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"email\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "86bf1e64a6",
+      "name": "Fim",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "END"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "61397a1f3f",
+      "name": "Consultar-agendamentos",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "consultar-agendamentos {\"id\":\"{{session.usuarioEncontrado.id}}\"}",
+        "say #!builtin_text-MLkcd1",
+        "say #!builtin_text-4VPfzP"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "04894873b5",
+      "name": "Chamar-API",
+      "next": [
+        {
+          "condition": "session.existeEmail === true",
+          "conditionType": "raw",
+          "node": "Opcoes-Atendimento-ClienteCadastrado"
+        },
+        {
+          "condition": "true",
+          "node": "Falha-validacao"
+        }
+      ],
+      "onEnter": [
+        "verificar-email {\"email\":\"{{user.email}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "ee082577f2",
+      "name": "Opcoes-Atendimento-ClienteCadastrado",
+      "next": [
+        {
+          "condition": "user.cadastradoAjuda == \"Consultar Agendamentos\"",
+          "conditionType": "raw",
+          "node": "Consultar-agendamentos"
+        },
+        {
+          "condition": "user.cadastradoAjuda == \"Consultar Serviços\"",
+          "conditionType": "raw",
+          "node": "Consultar-servicos"
+        },
+        {
+          "condition": "user.cadastradoAjuda == \"Ver FAQ\"",
+          "conditionType": "raw",
+          "node": "Ver-faq"
+        },
+        {
+          "condition": "true",
+          "node": "Fim"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-08IZqq"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"cadastradoAjuda\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "511fce5858",
+      "name": "Consultar-servicos",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-1e82"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "b5bc847f6e",
+      "name": "Ver-faq",
+      "next": [
+        {
+          "condition": "user.opcaoFaq == \"Qual o horário de funcionamento?\"",
+          "conditionType": "raw",
+          "node": "node-4262"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Quais os métodos de pagamento?\"",
+          "conditionType": "raw",
+          "node": "sadasd"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Como funciona o preço?\"",
+          "conditionType": "raw",
+          "node": "node-2c21"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Qual a especialidade do salão?\"",
+          "conditionType": "raw",
+          "node": "node-9ebe"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Onde fica o salão?\"",
+          "conditionType": "raw",
+          "node": "node-1f37"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-B0oLp2"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"opcaoFaq\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "e17e48fb7f",
+      "name": "node-ab68",
+      "next": [
+        {
+          "condition": "session.usuarioCadastrado == true",
+          "conditionType": "raw",
+          "node": "node-2fc2"
+        },
+        {
+          "condition": "true",
+          "node": "node-4015"
+        }
+      ],
+      "onEnter": [
+        "cadastrar-usuario {\"nome\":\"{{user.nome}}\",\"email\":\"{{user.email}}\",\"telefone\":\"{{user.telefone}}\",\"senha\":\"{{user.senha}}\"}",
+        "pipefy {\"nome\":\"{{user.nome}}\",\"email\":\"{{user.email}}\",\"telefone\":\"{{user.telefone}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "8fd78ee689",
+      "name": "node-2fc2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Chamar-API"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-4sY2UC"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "2a43a52b08",
+      "name": "node-4015",
+      "next": [
+        {
+          "condition": "user.falhaCadastro == \"Tentar novamente\"",
+          "conditionType": "raw",
+          "node": "Email"
+        },
+        {
+          "condition": "true",
+          "node": "Fim"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-49FL4T"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"falhaCadastro\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "46862acc84",
+      "name": "node-0e80",
+      "next": [
+        {
+          "condition": "user.continuar == \"Sim\"",
+          "conditionType": "raw",
+          "node": "Opcoes-Atendimento-ClienteCadastrado"
+        },
+        {
+          "condition": "true",
+          "node": "Fim"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown--yKYjA"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"continuar\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "e578ba9ec4",
+      "name": "node-4262",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-zzDbzA"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "69809e9138",
+      "name": "sadasd",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-5qNh_x"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9522217bbd",
+      "name": "node-2c21",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-cQoG2C"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "4f3f307a27",
+      "name": "node-9ebe",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Vxt6fY"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "1b9cbfcba5",
+      "name": "node-1f37",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-qJg0wt"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "610b7167c1",
+      "name": "Ver-faq-copy",
+      "next": [
+        {
+          "condition": "user.opcaoFaq == \"Qual o horário de funcionamento?\"",
+          "conditionType": "raw",
+          "node": "node-4262-copy"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Quais os métodos de pagamento?\"",
+          "conditionType": "raw",
+          "node": "sadasd-copy"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Como funciona o preço?\"",
+          "conditionType": "raw",
+          "node": "node-2c21-copy"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Qual a especialidade do salão?\"",
+          "conditionType": "raw",
+          "node": "node-9ebe-copy"
+        },
+        {
+          "condition": "user.opcaoFaq == \"Onde fica o salão?\"",
+          "conditionType": "raw",
+          "node": "node-1f37-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown-B0oLp2"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"opcaoFaq\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "b4b0d3c883",
+      "name": "node-4262-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-3bad"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-zzDbzA"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "7cd83120d0",
+      "name": "sadasd-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-3bad"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-5qNh_x"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c3766e8c61",
+      "name": "node-2c21-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-3bad"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-cQoG2C"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "01e55e3112",
+      "name": "node-9ebe-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-3bad"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Vxt6fY"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "79d7458596",
+      "name": "node-1f37-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-3bad"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-qJg0wt"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "3963ba1fa9",
+      "name": "node-3bad",
+      "next": [
+        {
+          "condition": "user.opcaoContinuar == \"Sim\"",
+          "conditionType": "raw",
+          "node": "Opcoes-Atendimento-ClienteNaoCadastrado"
+        },
+        {
+          "condition": "true",
+          "node": "Fim"
+        }
+      ],
+      "onEnter": [
+        "say #!dropdown--yKYjA"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"opcaoContinuar\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "c2239bd979",
+      "name": "node-1e82",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-0e80"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-o5iKQl"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}
